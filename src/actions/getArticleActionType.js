@@ -1,0 +1,2 @@
+export const GET_ARTICLE = "GET_ARTICLE"
+export const GET_ARTICLE_ID = "GET_ARTICLE_ID"
