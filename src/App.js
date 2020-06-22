@@ -1,11 +1,23 @@
-import React from 'react';
-
-function App() {
+import React from 'react'
+import { bindActionCreators } from 'redux'
+import { getArticle } from './reducers/index'
+export default function App() {
    return (
       <div>
-         <h1>Hello World</h1>
+
       </div>
-   );
+   )
 }
 
-export default App;
+const mapStateToProps = (state) => {
+   return {
+      data: state.getArticle.data
+   }
+}
+const mapDipatchToProps = (dispatch) => {
+   return bindActionCreators({
+      getArticle
+   }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDipatchToProps)(ListPosts)
